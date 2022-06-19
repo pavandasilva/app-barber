@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react'
-import { SideMenu, Header } from '../../components'
-import { useSideBar } from '../../contexts'
+import { Header } from '../../components'
 import { Container, Content, Body } from './styles'
 
 interface MainLayoutProps {
@@ -9,19 +8,9 @@ interface MainLayoutProps {
 }
 
 export const MainLayout = ({ title, children }: MainLayoutProps) => {
-  const { isVisible, isMobileVisible, setIsMobileVisible, setIsVisible } = useSideBar()
-
-  const handleClickOutside = () => {
-    if (isMobileVisible) {
-      setIsVisible(state => !state)
-      setIsMobileVisible(state => !state)
-    }
-  }
-
   return (
-    <Container onClick={handleClickOutside}>
-      <SideMenu />
-      <Content isVisible={isVisible}>
+    <Container>
+      <Content>
         <Header />
         <Body>
           {children}

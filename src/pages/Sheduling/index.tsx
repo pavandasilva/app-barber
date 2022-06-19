@@ -1,15 +1,15 @@
 import React from 'react'
+import {ServiceProvider} from '../../components/ServiceProvider'
 import { MainLayout } from '../../layouts/MainLayout'
 import { Container } from './styles'
 
-export const Dashboard = () => {
+export const Sheduling = () => {
   return (
     <MainLayout title="Dashboard">
-      <h1>Dashboard</h1>
       <Container>
-        <h1>conteúdo</h1>
+        <h2>Selecione o profissional</h2>
+        <ServiceProvider />
       </Container>
-
     </MainLayout>
   )
 }

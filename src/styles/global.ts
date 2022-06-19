@@ -47,7 +47,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${props => props.theme.colors.primaryText};
     font-size: 16px;
     letter-spacing: 0.075em;
-    font-weight: normal;
+    font-weight: bold;
   }
 
   .swal2-popup {
